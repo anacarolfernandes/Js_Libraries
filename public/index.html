@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderlust Escapes</title>
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Glide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Your custom CSS (FIXED path) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <section id="hero">
+    <canvas id="gradient-canvas"></canvas>
+    <div class="hero-content">
+      <h1>Your Dream Vacation Starts Here</h1>
+    </div>
+  </section>
+
+  <!-- Top Destinations Carousel -->
+  <section id="destinations" data-aos="fade-up">
+    <h2>Top Destinations</h2>
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <!-- FIXED image paths (remove "public/") -->
+          <li class="glide__slide"><img src="assets/bali.jpg" alt="Bali" /></li>
+          <li class="glide__slide"><img src="assets/paris.jpg" alt="Paris" /></li>
+          <li class="glide__slide"><img src="assets/tokyo.jpg" alt="Tokyo" /></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
+  <section id="map" data-aos="fade-up">
+    <h2>Where We Take You</h2>
+    <div id="travel-map" style="height: 400px;"></div>
+  </section>
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+
+  <!-- Your custom JS (FIXED path) -->
+  <script src="js/main.js"></script>
+</body>
+</html>
