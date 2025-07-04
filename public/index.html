@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wanderlust Escapes</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
@@ -14,15 +17,20 @@
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  <!-- Your custom CSS (FIXED path) -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
   <!-- Hero Section -->
   <section id="hero">
     <canvas id="gradient-canvas"></canvas>
-    <div class="hero-content">
+    <div class="overlay"></div>
+    <div class="hero-content" data-aos="fade-down">
       <h1>Your Dream Vacation Starts Here</h1>
+      <p>Find your perfect escape with Wanderlust Escapes.</p>
+      <a href="#destinations" class="btn-primary" data-aos="zoom-in">Explore Now</a>
+      <div class="scroll-arrow">↓</div>
     </div>
   </section>
 
@@ -32,20 +40,40 @@
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <!-- FIXED image paths (remove "public/") -->
-          <li class="glide__slide"><img src="assets/bali.jpg" alt="Bali" /></li>
-          <li class="glide__slide"><img src="assets/paris.jpg" alt="Paris" /></li>
-          <li class="glide__slide"><img src="assets/tokyo.jpg" alt="Tokyo" /></li>
+          <li class="glide__slide">
+            <img src="assets/bali.jpg" alt="Bali" />
+            <div class="destination-title">Bali, Indonesia</div>
+          </li>
+          <li class="glide__slide">
+            <img src="assets/paris.jpg" alt="Paris" />
+            <div class="destination-title">Paris, France</div>
+          </li>
+          <li class="glide__slide">
+            <img src="assets/tokyo.jpg" alt="Tokyo" />
+            <div class="destination-title">Tokyo, Japan</div>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Map Section -->
+  <!-- Map Section -->
   <section id="map" data-aos="fade-up">
     <h2>Where We Take You</h2>
-    <div id="travel-map" style="height: 400px;"></div>
+    <p style="max-width: 600px; margin: 0 auto 20px; color: #666;">
+      Explore our most loved destinations. Zoom and click the pins to learn more.
+    </p>
+    <div id="travel-map"></div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by Ana Carolina</p>
+    <!-- <div class="social-links">
+      <a href="https://www.linkedin.com/in/ana-carolina" target="_blank">LinkedIn</a>
+      <a href="https://github.com/anacarolina" target="_blank">GitHub</a>
+    </div> -->
+  </footer>
 
   <!-- JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -53,7 +81,7 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
 
-  <!-- Your custom JS (FIXED path) -->
+  <!-- Custom JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
