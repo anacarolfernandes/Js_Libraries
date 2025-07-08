@@ -22,6 +22,17 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <div class="logo">Wanderlust Escapes</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero Section -->
   <section id="hero">
     <canvas id="gradient-canvas"></canvas>
@@ -52,6 +63,26 @@
             <img src="assets/tokyo.jpg" alt="Tokyo" />
             <div class="destination-title">Tokyo, Japan</div>
           </li>
+          <li class="glide__slide">
+            <img src="assets/newyork.jpeg" alt="New York" />
+            <div class="destination-title">New York, USA</div>
+          </li>
+          <li class="glide__slide">
+            <img src="assets/rio.jpeg" alt="Rio de Janeiro" />
+            <div class="destination-title">Rio de Janeiro, Brazil</div>
+          </li>
+          <li class="glide__slide">
+            <img src="assets/capetown.jpeg" alt="Cape Town" />
+            <div class="destination-title">Cape Town, South Africa</div>
+          </li>
+          <li class="glide__slide">
+            <img src="assets/rome.jpeg" alt="Rome" />
+            <div class="destination-title">Rome, Italy</div>
+          </li>
+          <li class="glide__slide">
+            <img src="assets/sidne.jpeg" alt="Sydney" />
+            <div class="destination-title">Sydney, Australia</div>
+          </li>
         </ul>
       </div>
     </div>
@@ -66,13 +97,25 @@
     <div id="travel-map"></div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Plan Your Trip</h2>
+    <p>Contact us and start packing!</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Where do you want to go?" required></textarea>
+      <button type="submit">Send Inquiry</button>
+    </form>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <p>Made with ❤️ by Ana Carolina</p>
-    <!-- <div class="social-links">
+    <p>Made by Ana Carolina</p>
+    <div class="social-links">
       <a href="https://www.linkedin.com/in/ana-carolina" target="_blank">LinkedIn</a>
       <a href="https://github.com/anacarolina" target="_blank">GitHub</a>
-    </div> -->
+    </div>
   </footer>
 
   <!-- JS Libraries -->
