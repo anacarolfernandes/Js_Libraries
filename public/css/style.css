@@ -1,3 +1,4 @@
+/* BASE STYLES */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -46,18 +47,14 @@ h1, h2 {
   color: #FF6B6B;
 }
 
-/* HERO SECTION */
+/* HERO */
 #hero {
   position: relative;
   height: 100vh;
+  background-image: url('../assets/airplane.jpeg');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
-}
-
-#gradient-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
 }
 
 .overlay {
@@ -116,11 +113,26 @@ h1, h2 {
   50% { transform: translateY(10px); }
 }
 
-/* DESTINATIONS SECTION */
+/* DESTINATIONS */
 #destinations {
+  position: relative;
   padding: 80px 20px;
-  background: #fffaf0;
-  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+#granim-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.destinations-content {
+  position: relative;
+  z-index: 1;
 }
 
 .glide__slides {
@@ -138,6 +150,7 @@ h1, h2 {
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
+  margin-bottom: 24px;
 }
 
 .glide__slide img:hover {
@@ -145,7 +158,6 @@ h1, h2 {
 }
 
 .destination-title {
-  margin-top: 12px;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -166,7 +178,7 @@ h1, h2 {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* CONTACT FORM */
+/* CONTACT */
 #contact {
   background: #fff;
   padding: 60px 20px;
@@ -227,6 +239,14 @@ footer .social-links a:hover {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  #navbar {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
@@ -241,16 +261,5 @@ footer .social-links a:hover {
 
   .scroll-arrow {
     font-size: 1.5rem;
-  }
-
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    padding-top: 10px;
   }
 }

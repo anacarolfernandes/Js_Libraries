@@ -17,6 +17,9 @@
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
+  <!-- Granim.js -->
+  <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -34,8 +37,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <canvas id="gradient-canvas"></canvas>
+  <section id="hero" style="background-image: url('assets/airiplane.jpeg');">
     <div class="overlay"></div>
     <div class="hero-content" data-aos="fade-down">
       <h1>Your Dream Vacation Starts Here</h1>
@@ -47,43 +49,20 @@
 
   <!-- Top Destinations Carousel -->
   <section id="destinations" data-aos="fade-up">
-    <h2>Top Destinations</h2>
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide">
-            <img src="assets/bali.jpg" alt="Bali" />
-            <div class="destination-title">Bali, Indonesia</div>
-          </li>
-          <li class="glide__slide">
-            <img src="assets/paris.jpg" alt="Paris" />
-            <div class="destination-title">Paris, France</div>
-          </li>
-          <li class="glide__slide">
-            <img src="assets/tokyo.jpg" alt="Tokyo" />
-            <div class="destination-title">Tokyo, Japan</div>
-          </li>
-          <li class="glide__slide">
-            <img src="assets/newyork.jpeg" alt="New York" />
-            <div class="destination-title">New York, USA</div>
-          </li>
-          <li class="glide__slide">
-            <img src="assets/rio.jpeg" alt="Rio de Janeiro" />
-            <div class="destination-title">Rio de Janeiro, Brazil</div>
-          </li>
-          <li class="glide__slide">
-            <img src="assets/capetown.jpeg" alt="Cape Town" />
-            <div class="destination-title">Cape Town, South Africa</div>
-          </li>
-          <li class="glide__slide">
-            <img src="assets/rome.jpeg" alt="Rome" />
-            <div class="destination-title">Rome, Italy</div>
-          </li>
-          <li class="glide__slide">
-            <img src="assets/sidne.jpeg" alt="Sydney" />
-            <div class="destination-title">Sydney, Australia</div>
-          </li>
-        </ul>
+    <!-- Granim Canvas Background -->
+    <canvas id="granim-canvas"></canvas>
+    <div class="destinations-content">
+      <h2>Top Destinations</h2>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="assets/bali.jpg" alt="Bali" />
+              <div class="destination-title">Bali, Indonesia</div>
+            </li>
+            <!-- Add more slides here -->
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -113,8 +92,7 @@
   <footer>
     <p>Made by Ana Carolina</p>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/ana-carolina" target="_blank">LinkedIn</a>
-      <a href="https://github.com/anacarolina" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/anacarol-fernandes/" target="_blank">LinkedIn</a>
     </div>
   </footer>
 
@@ -122,9 +100,27 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
 
   <!-- Custom JS -->
   <script src="js/main.js"></script>
+
+  <!-- Granim Init -->
+  <script>
+    const granimInstance = new Granim({
+      element: '#granim-canvas',
+      direction: 'diagonal',
+      isPausedWhenNotInView: true,
+      states: {
+        "default-state": {
+          gradients: [
+            ['#FF6B6B', '#FFD93D'],
+            ['#6BCB77', '#4D96FF'],
+            ['#FF6B6B', '#6BCB77']
+          ],
+          transitionSpeed: 3000
+        }
+      }
+    });
+  </script>
 </body>
 </html>
